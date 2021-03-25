@@ -87,7 +87,7 @@ main .coluna section{
     border: 1px solid rgb(214, 234, 255);
     margin: 0 0 20px;
     padding: 20px;
-    min-height: 187px;
+    min-height: 226px;
 }
 
 main .coluna section h2{
@@ -117,3 +117,28 @@ main .coluna section ul li strong{
 }
 
 /*footer*/
+footer{
+    background-color: rgb(4, 19, 61);
+}
+
+footer nav ul li a{
+    color: white;
+}
+
+footer nav .info-contato li{
+    margin: 12px 0;
+}
+footer nav .redes-sociais{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.336);
+    margin: 20px 0 0;
+    padding: 14px 0 0;
+}
+footer nav .redes-sociais li{
+    text-align: center;
+}
+footer nav .redes-sociais li a img{
+    max-width: 50px;
+    margin: 0 30px;
+}
