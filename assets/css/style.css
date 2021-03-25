@@ -1,3 +1,9 @@
+:root{
+    --corBackgroundPrinaria: rgb(69, 219, 252);
+    --corBackgroundSegundaria: rgb(4, 19, 61);
+    --corTextPreimaria:  rgb(99, 99, 99);
+    --corTextSegundaria: rgb(0, 0, 0);
+}
 /*estilo gerais*/
 html, body ,figure, img, div,input, textarea,p ,h1 ,h2, h3 ,h4 ,li , ul, a, main{
     margin: 0;
@@ -5,20 +11,6 @@ html, body ,figure, img, div,input, textarea,p ,h1 ,h2, h3 ,h4 ,li , ul, a, main
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-}
-
-.container{
-    width: 100%;
-    max-width: 1125px;
-    margin: 0 auto;
-    padding: 30px;
-}
-
-.linha{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
 }
 
 .coluna{
@@ -36,8 +28,8 @@ body{
 
 /*header*/
 header{
-    background-color: rgb(69, 219, 252);
-    padding-top: 30px;
+    background-color: var(--corBackgroundPrinaria);
+    padding: 20px 20px 0;
 }
 
 header .container{
@@ -53,21 +45,22 @@ header .coluna-esquerda{
 }
 
 header .coluna-direita{
-    flex-basis: 70%;
+    flex-basis: 60%;
+    text-align: center;
 }
 
 header .coluna-esquerda img{
-    max-width: 250px;
-    border-radius: 50%;
+    max-width: 100%;
 }
 
 header .coluna h1{
-    font-size: 24px;
+    font-size: 15px;
+    color: var(--corTextSegundaria);
 }
 
 header .coluna p{
     font-size: 16px;
-    color: rgb(99, 99, 99);
+    color: var(--corTextPreimaria);
 }
 
 header .coluna ul{
@@ -80,14 +73,13 @@ header .coluna ul li{
 
 header .coluna ul li a{
     font-size: 16px;
-    color: black;
+    color: var(--corTextSegundaria);
 }
 /*main*/
 main .coluna section{
-    border: 1px solid rgb(214, 234, 255);
+    border-bottom: 1px solid rgb(214, 234, 255);;
     margin: 0 0 20px;
-    padding: 20px;
-    min-height: 226px;
+    padding: 10px 20px;
 }
 
 main .coluna section h2{
@@ -97,7 +89,7 @@ main .coluna section h2{
 
 main .coluna section p{
     font-size: 14px;
-    color: rgb(99, 99, 99);
+    color: var(--corTextPreimaria);
     line-height: 24px;
 }
 
@@ -118,7 +110,7 @@ main .coluna section ul li strong{
 
 /*footer*/
 footer{
-    background-color: rgb(4, 19, 61);
+    background-color: var(--corBackgroundSegundaria);
 }
 
 footer nav ul li a{
@@ -127,18 +119,97 @@ footer nav ul li a{
 
 footer nav .info-contato li{
     margin: 12px 0;
+    text-align: center;
 }
 footer nav .redes-sociais{
     display: flex;
     justify-content: center;
     border-top: 1px solid rgba(255, 255, 255, 0.336);
-    margin: 20px 0 0;
-    padding: 14px 0 0;
+    margin: 5px 0 0;
+    padding: 6px 0 0;
 }
 footer nav .redes-sociais li{
     text-align: center;
 }
+
+footer nav .redes-sociais li p{
+    font-size: 10px;
+}
 footer nav .redes-sociais li a img{
     max-width: 50px;
-    margin: 0 30px;
+    margin: 12px 13px 0;
+}
+/*extras*/
+label{
+
+}
+#ativadark{
+    display: none;
+}
+#ativadark:checked ~ #dark{
+    --corBackgroundPrinaria: rgb(0, 33, 59);
+    --corBackgroundSegundaria: rgb(38, 45, 49);
+    --corBackgroundTercearia: rgb(25, 25, 25);
+    --corTextPreimaria:  rgb(255, 255, 255);
+    --corTextSegundaria: rgb(255, 255, 255);
+}
+#ativadark:checked ~ #dark header .container{
+    background-color: var(--corBackgroundSegundaria);
+}
+#ativadark:checked ~ #dark .container{
+    background-color: var(--corBackgroundSegundaria);
+}
+#ativadark:checked ~ #dark main{
+    background-color: var(--corBackgroundTercearia);
+}
+#ativadark:checked ~ #dark footer{
+    background-color: var(--corBackgroundTercearia);
+}
+
+
+/*@media*/
+@media only screen and (min-width: 768px){
+    .linha{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .container{
+        width: 100%;
+        max-width: 1125px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    header .coluna-direita{
+        text-align: left;
+    }
+    header .coluna-esquerda img{
+        max-width: 250px;
+        border-radius: 50%;
+    }
+    header .coluna h1{
+        font-size: 24px;
+    }
+    main .coluna section{
+        border: 1px solid rgb(214, 234, 255);
+        padding: 20px;
+        min-height: 225px;
+        color: var(--corTextSegundaria);
+    }
+    footer nav .info-contato li{
+        text-align: left;
+    }
+    footer nav .redes-sociais{
+        margin: 20px 0 0;
+        padding: 14px 0 0;
+    }
+    footer nav .redes-sociais li a img{
+        margin: 0 30px;
+    }
+}
+@media only screen and (min-width: 991px){
+    header .coluna-direita{
+        flex-basis: 70%;
+    }
 }
