@@ -67,10 +67,6 @@ header .coluna ul{
     margin: 16px 0 0;
 }
 
-header .coluna ul li{
-    margin: 0 0 12px;
-}
-
 header .coluna ul li a{
     font-size: 16px;
     color: var(--corTextSegundaria);
@@ -140,8 +136,28 @@ footer nav .redes-sociais li a img{
     margin: 12px 13px 0;
 }
 /*extras*/
-label{
 
+.container{
+    position: relative;
+}
+
+label{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 52px;
+    height: 30px;
+    background-color: var(--corBackgroundSegundaria);
+    border-radius: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+label span{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: #d4e9ff;
+    border-radius: 100%;
 }
 #ativadark{
     display: none;
@@ -191,6 +207,9 @@ label{
     header .coluna h1{
         font-size: 24px;
     }
+    header .coluna ul li{
+        margin: 0 0 12px;
+    }    
     main .coluna section{
         border: 1px solid rgb(214, 234, 255);
         padding: 20px;
