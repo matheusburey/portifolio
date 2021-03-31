@@ -156,8 +156,17 @@ label span{
     width: 20px;
     height: 20px;
     display: block;
-    background-color: #d4e9ff;
+    background-color: rgb(212, 233, 255);
     border-radius: 100%;
+    cursor: pointer;
+    transition: .3s;
+}
+#ativadark:checked ~ #dark label{
+    background-color: rgb(212, 233, 255);
+}
+#ativadark:checked ~ #dark label span{
+    background-color: var(--corBackgroundSegundaria);
+    transform: translate(21px);
 }
 #ativadark{
     display: none;
