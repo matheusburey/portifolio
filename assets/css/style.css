@@ -94,7 +94,7 @@ main .coluna section ul li{
 }
 
 main .coluna section ul li h3{
-    font-size: 17px;
+    font-size: 15px;
 }
 
 main .coluna section ul li strong{
@@ -102,6 +102,9 @@ main .coluna section ul li strong{
     font-weight: 500;
     margin: 5px 0 10px;
     display: inline-block;
+}
+main .coluna section nav a{
+    color: var(--corTextPreimaria);
 }
 
 /*footer*/
