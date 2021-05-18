@@ -5,16 +5,12 @@
     --corTextSegundaria: rgb(0, 0, 0);
 }
 /*estilo gerais*/
-html, body ,figure, img, div,input, textarea,p ,h1 ,h2, h3 ,h4 ,li , ul, a, main{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-}
-
-.coluna{
-    flex-basis: 49%;
 }
 
 .hidden{
@@ -45,7 +41,7 @@ header .coluna-esquerda{
 }
 
 header .coluna-direita{
-    flex-basis: 60%;
+    flex-basis: 55%;
     text-align: center;
 }
 
@@ -197,10 +193,13 @@ label span{
 
 /*@media*/
 @media only screen and (min-width: 768px){
+    /* Gerais */
+    .coluna{
+        flex-basis: 49%;
+    }
     .linha{
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-start;
         justify-content: space-between;
     }
     .container{
@@ -209,6 +208,7 @@ label span{
         margin: 0 auto;
         padding: 30px;
     }
+    /* header */
     header .coluna-direita{
         text-align: left;
     }
@@ -221,13 +221,15 @@ label span{
     }
     header .coluna ul li{
         margin: 0 0 12px;
-    }    
+    }
+    /* main */
     main .coluna section{
         border: 1px solid rgb(214, 234, 255);
         padding: 20px;
         min-height: 225px;
         color: var(--corTextSegundaria);
     }
+    /* footer */
     footer nav .info-contato li{
         text-align: left;
     }
@@ -241,6 +243,6 @@ label span{
 }
 @media only screen and (min-width: 991px){
     header .coluna-direita{
-        flex-basis: 70%;
+        flex-basis: 65%;
     }
 }
