@@ -16,18 +16,24 @@ export default function Footer({ user }: IProps) {
         <div>
           <h2 className="font-bold text-xl">SOCIAL</h2>
           <nav className="flex gap-5 pt-4">
-            <Link href={user.html_url} target="_blank">
+            <Link
+              href={user.html_url}
+              target="_blank"
+              className="hover:text-blue-500 transition duration-300"
+            >
               <AiFillGithub size={25} />
             </Link>
             <Link
               href="https://www.linkedin.com/in/matheus-h-burei/"
               target="_blank"
+              className="hover:text-blue-500 transition duration-300"
             >
               <AiFillLinkedin size={25} />
             </Link>
             <Link
               href={`https://twitter.com/${user.twitter_username}`}
               target="_blank"
+              className="hover:text-blue-500 transition duration-300"
             >
               <AiOutlineTwitter size={25} />
             </Link>
