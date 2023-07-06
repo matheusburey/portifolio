@@ -1,8 +1,9 @@
-import Link from "next/link";
-import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
+import { IData } from '@/app/types'
+import Link from 'next/link'
+import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 
 interface IProps {
-  user: IData;
+  user: IData
 }
 
 export default function Footer({ user }: IProps) {
@@ -41,5 +42,5 @@ export default function Footer({ user }: IProps) {
         </div>
       </div>
     </footer>
-  );
+  )
 }

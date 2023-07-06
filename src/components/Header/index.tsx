@@ -1,8 +1,9 @@
-import Image from "next/image";
-import Link from "./Link";
+import Image from 'next/image'
+import Link from './Link'
+import { IData } from '@/app/types'
 
 interface IProps {
-  user: IData;
+  user: IData
 }
 
 export default function Header({ user }: IProps) {
@@ -30,5 +31,5 @@ export default function Header({ user }: IProps) {
         </nav>
       </div>
     </header>
-  );
+  )
 }

@@ -1,25 +1,26 @@
-import Button from "../Button";
+import Button from '../Button'
+import { IData } from '@/app/types'
 
 const skills = [
-  "HTML",
-  "CSS",
-  "JavaScrip",
-  "React",
-  "Sass",
-  "Tailwind",
-  "Node",
-  "Python",
-  "Git",
-  "Docker",
-  "SQL",
-  "Typescript",
-  "Vue",
-  "Next",
-  "Django",
-];
+  'HTML',
+  'CSS',
+  'JavaScrip',
+  'React',
+  'Sass',
+  'Tailwind',
+  'Node',
+  'Python',
+  'Git',
+  'Docker',
+  'SQL',
+  'Typescript',
+  'Vue',
+  'Next',
+  'Django',
+]
 
 interface IProps {
-  user: IData;
+  user: IData
 }
 
 export default function Main({ user }: IProps) {
@@ -133,5 +134,5 @@ export default function Main({ user }: IProps) {
         </form>
       </div>
     </main>
-  );
+  )
 }
