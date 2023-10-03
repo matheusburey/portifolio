@@ -1,6 +1,6 @@
 interface IProps {
-  text: string;
-  href: string;
+  text: string
+  href: string
 }
 
 export default function Link({ text, href }: IProps) {
@@ -11,5 +11,5 @@ export default function Link({ text, href }: IProps) {
     >
       {text}
     </a>
-  );
+  )
 }
