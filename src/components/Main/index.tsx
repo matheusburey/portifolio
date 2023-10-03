@@ -1,5 +1,6 @@
 import Button from '../Button'
 import { IData } from '@/app/types'
+import { Projects } from './Projects'
 
 const skills = [
   'HTML',
@@ -81,6 +82,9 @@ export default function Main({ user }: IProps) {
             Aqui você encontrará alguns dos projetos pessoais e de clientes que
             criei com cada projeto contendo seu próprio estudo de caso
           </p>
+          <div className="pt-40 px-12">
+            <Projects />
+          </div>
         </div>
       </div>
       <div id="contact" className="py-28 mx-auto px-6 bg-gray-100">
