@@ -20,6 +20,29 @@ const skills = [
   'Django',
 ]
 
+const projectInHighlights = [
+  {
+    name: 'Feedback Widget',
+    description:
+      'Um Component Widget para feedback que pode ser utilizado em qualquer site.',
+    img: 'https://github.com/matheusburey/feedback_widget/blob/main/.github/img_project.png?raw=true',
+    link: 'https://github.com/matheusburey/feedback_widget',
+  },
+  {
+    name: 'Feedback Widget',
+    description:
+      'Um Component Widget para feedback que pode ser utilizado em qualquer site.',
+    img: 'https://github.com/matheusburey/feedback_widget/blob/main/.github/img_project.png?raw=true',
+    link: 'do-it-beige.vercel.app',
+  },
+  {
+    name: 'Do It',
+    description: 'Um app organize seu trabalho e sua vida.',
+    img: 'https://github.com/matheusburey/feedback_widget/blob/main/.github/img_project.png?raw=true',
+    link: 'https://github.com/matheusburey/feedback_widget',
+  },
+]
+
 interface IProps {
   user: IData
 }
@@ -82,8 +105,10 @@ export default function Main({ user }: IProps) {
             Aqui você encontrará alguns dos projetos pessoais e de clientes que
             criei com cada projeto contendo seu próprio estudo de caso
           </p>
-          <div className="pt-40 px-12">
-            <Projects />
+          <div className="pt-32 px-12">
+            {projectInHighlights.map((project) => (
+              <Projects key={project.name} {...project} />
+            ))}
           </div>
         </div>
       </div>
