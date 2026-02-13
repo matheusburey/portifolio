@@ -7,7 +7,7 @@
           variant === 'primary',
         'bg-gray-200 text-gray-900 px-8 py-3 font-bold text-2xl hover:bg-gray-300':
           variant === 'secondary',
-        'bg-transparent p-3 text-base hover:text-blue-500':
+        'bg-transparent p-3 text-base hover:text-blue-500 text-white':
           variant === 'outline',
       },
     ]"
@@ -19,9 +19,9 @@
 <script setup lang="ts">
 type ButtonVariant = "primary" | "secondary" | "outline";
 defineProps({
-  variant: {
-    type: String as PropType<ButtonVariant>,
-    default: "primary",
-  },
+	variant: {
+		type: String as PropType<ButtonVariant>,
+		default: "primary",
+	},
 });
 </script>

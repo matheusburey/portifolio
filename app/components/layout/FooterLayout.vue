@@ -1,11 +1,11 @@
 <template>
   <footer class="bg-black text-white py-16 w-full px-6">
-    <div class="max-w-7xl mx-auto flex justify-between">
-      <div class="max-w-md">
-        <h1 class="font-bold text-xl mb-6">{{ name.toUpperCase() }}</h1>
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between">
+      <div class="w-full md:max-w-md">
+        <h1 class="font-bold text-xl mb-6">{{ name?.toUpperCase() }}</h1>
         <p class="text-sm">{{ bio }}</p>
       </div>
-      <div>
+      <div class="mt-10 md:mt-0">
         <h2 class="font-bold text-xl">SOCIAL</h2>
         <nav class="flex gap-5 pt-4">
           <NuxtLink
@@ -36,24 +36,12 @@
 </template>
 
 <script setup lang="ts">
-import { Twitter, Github, Linkedin } from "lucide-vue-next";
+import { Github, Linkedin, Twitter } from "lucide-vue-next";
 
 const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  bio: {
-    type: String,
-    required: true,
-  },
-  html_url: {
-    type: String,
-    required: true,
-  },
-  twitter_username: {
-    type: String,
-    required: true,
-  },
+	name: String,
+	bio: String,
+	html_url: String,
+	twitter_username: String,
 });
 </script>

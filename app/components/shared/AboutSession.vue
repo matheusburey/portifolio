@@ -1,12 +1,12 @@
 <template>
-  <div id="about" class="py-28 max-w-7xl mx-auto px-6">
+  <div id="about" class="py-15 md:py-28 max-w-7xl mx-auto px-6">
     <div class="text-center">
       <h2 class="text-4xl font-bold">SOBRE MIM</h2>
       <hr class="border-y-2 border-blue-500 w-10 mx-auto my-8 rounded" />
       <p class="text-xl text-gray-700 max-w-3xl mx-auto">{{ bio }}</p>
     </div>
-    <div class="display flex">
-      <div class="w-1/2 p-8 text-gray-700">
+    <div class="flex flex-col-reverse md:flex-row">
+      <div class="w-full md:w-1/2 p-4 md:p-8 text-gray-700">
         <h3 class="text-2xl font-bold py-8 text-black">Me conhecer!</h3>
         <p class="text-xl">
           Sou um Desenvolvedor Web Fullstack que cria sites e aplicativos da Web
@@ -21,7 +21,7 @@
         </p>
         <ButtonUi @click="scrollToSection('#projects')"> PROJETOS </ButtonUi>
       </div>
-      <div class="w-1/2 p-8">
+      <div class="w-full md:w-1/2 p-4 md:p-8">
         <h3 class="font-bold text-2xl py-8">Minhas habilidades</h3>
         <div class="flex flex-wrap">
           <p
@@ -38,27 +38,22 @@
 </template>
 <script setup lang="ts">
 import { scrollToSection } from "@/helper";
+
 const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  bio: {
-    type: String,
-    required: true,
-  },
+	name: String,
+	bio: String,
 });
 
 const skills = [
-  "HTML",
-  "CSS",
-  "JavaScrip",
-  "Typescript",
-  "Vue",
-  "Nuxt",
-  "React",
-  "React Native",
-  "Next",
-  "Tailwind",
+	"HTML",
+	"CSS",
+	"JavaScript",
+	"TypeScript",
+	"Vue",
+	"Nuxt",
+	"React",
+	"React Native",
+	"Next",
+	"Tailwind",
 ];
 </script>

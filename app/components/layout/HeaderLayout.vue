@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed w-full p-6 bg-white">
+  <header class="fixed w-full p-6 z-10 backdrop-blur-sm bg-black/60">
     <div class="max-w-7xl mx-auto flex justify-between">
       <div class="flex items-center gap-5">
         <figure>
@@ -12,9 +12,9 @@
           />
           <figcaption class="hidden">{{ name }}</figcaption>
         </figure>
-        <h1 class="font-bold text-xl">{{ name.toUpperCase() }}</h1>
+        <h1 class="font-bold text-xl text-white">{{ name?.toUpperCase() }}</h1>
       </div>
-      <div class="flex align-center gap-2">
+      <div class="hidden md:flex align-center gap-2">
         <ButtonUi variant="outline" @click="scrollToSection('#header')"
           >Home</ButtonUi
         >
@@ -34,14 +34,9 @@
 
 <script setup lang="ts">
 import { scrollToSection } from "@/helper";
+
 const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  avatar_url: {
-    type: String,
-    required: true,
-  },
+	name: String,
+	avatar_url: String,
 });
 </script>

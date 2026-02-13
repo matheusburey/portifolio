@@ -1,5 +1,5 @@
 <template>
-  <div id="contact" class="py-28 mx-auto px-6 bg-gray-100">
+  <div id="contact" class="py-15 md:py-28 mx-auto px-6 bg-gray-100">
     <div class="text-center">
       <h2 class="text-4xl font-bold">CONTATO</h2>
       <hr class="border-y-2 border-blue-500 w-10 mx-auto my-8 rounded" />
